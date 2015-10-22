@@ -1,0 +1,5 @@
+<?php
+require('sdk/ET_Client.php');
+
+$client = new ET_Client();
+?>
