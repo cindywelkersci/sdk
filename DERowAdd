@@ -1,0 +1,18 @@
+<?php
+require('sdk/ET_Client.php');
+
+$client = new ET_Client();
+
+$deRow = new ET_DataExtension_Row();
+$deRow->authStub = $client;
+
+// specify the name of the data extension
+$deRow->CustomerKey = "subscribers";
+
+// specify the values of the data extension row
+$deRow->props = array("EmailAddress" => "YOUR_EMAIL_ADDRESS", "FirstName" => "YOUR_FIRST_NAME");
+
+$response = $deRow->post();
+
+print_r($response);
+?>
